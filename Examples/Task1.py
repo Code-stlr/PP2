@@ -1,0 +1,1 @@
+print("example of string !!!")
