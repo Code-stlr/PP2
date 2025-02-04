@@ -1,58 +1,44 @@
 # problem 1
-class StringHandler:
-    def __init__(self):
-        self.text = ""
+class getStringYo():
+  def __init__(self):
+    self.text = " "
+  def getString(self):
+    self.text = input("Enter a sentence : ")
+  def printString(self):
+    print(self.text.upper())
 
-    def getString(self):
-        self.text = input("Enter a string: ")
+p1 = getStringYo()
+p1.getString()
+p1.printString()
 
-    def printString(self):
-        print(self.text.upper())
-
-# Example usage:
-handler = StringHandler()
-handler.getString()  # User inputs a string
-handler.printString()  # Prints the string in uppercase
-
-# probelm 2
+# problem 2
 
 class Shape:
-    def area(self):
-        return 0  
+  def area(self):
+    print(0)
 
 class Square(Shape):
-    def __init__(self, length):
-        self.length = length
-
-    def area(self):
-        return self.length ** 2  
+  def __init__(self, length):
+    self.length = length
+  def area(self):
+    print(self.length ** 2)
 
 shape = Shape()
-print("Shape area:", shape.area())  # Output: 0
-
+shape.area()
 square = Square(5)
-print("Square area:", square.area())  # Output: 25
+square.area()
 
-
-# problem 3
-
-class Shape:
-    def area(self):
-        return 0 
-
+# problme 3
 class Rectangle(Shape):
-    def __init__(self, length, width):
-        self.length = length
-        self.width = width
+  def __init__(self, length, width):
+    self.length = length
+    self.width = width
+  def area(self):
+    print(self.length * self.width)
+rectangle = Rectangle(2,5)
+rectangle.area()  
 
-    def area(self):
-        return self.length * self.width  
-    
-rectangle = Rectangle(4, 6)
-print("Rectangle area:", rectangle.area())  # Output: 24
-
-
-# problem 4
+# # problem 4
 import math
 
 class Point:
@@ -82,36 +68,30 @@ print("Distance:", p1.dist(p2))  # Output: 5.0
 p1.move(10, 12)
 p1.show()  # Output: (10, 12)
 
+
 # problem 5
-
 class Account:
-    def __init__(self, owner, balance=0):
-        self.owner = owner
-        self.balance = balance
+  def __init__(self, owner, balance):
+    self.owner = owner
+    self.balance = balance
+  def deposit(self):
+    temp = int(input("How much to deposit ? "))
+    self.balance += temp
+    print("Balance : ", self.balance)
+  def withdraw(self):
+    temp = int(input("How much to withdraw ? "))
+    if temp > self.balance:
+      print("Not enough balance!")
+    else:
+      self.balance -= temp
+      print("Remains : ", self.balance)
 
-    def deposit(self, amount):
-        if amount > 0:
-            self.balance += amount
-            print(f"Deposited: ${amount}. New balance: ${self.balance}")
-        else:
-            print("Deposit amount must be positive.")
-
-    def withdraw(self, amount):
-        if amount > self.balance:
-            print(f"Insufficient funds! Available balance: ${self.balance}")
-        elif amount > 0:
-            self.balance -= amount
-            print(f"Withdrew: ${amount}. New balance: ${self.balance}")
-        else:
-            print("Withdrawal amount must be positive.")
-
-
-account = Account("John Doe", 100)
-
-account.withdraw(30)   # Withdrew: $30. New balance: $120
-account.withdraw(200)  # Insufficient funds!
-account.deposit(-10)   # Deposit amount must be positive.
-account.withdraw(-5)   # Withdrawal amount must be positive.
+p1 = Account("Ehsan", 1000)
+#for testing
+p1.deposit()
+p1.deposit()
+p1.withdraw()
+p1.withdraw()
 
 # problem 6
 def is_prime(n):
