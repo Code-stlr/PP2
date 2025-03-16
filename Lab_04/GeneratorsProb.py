@@ -46,7 +46,7 @@ print(*squares(l, r), sep=', ')
 n = int(input())
 
 def nums(n):
-    for i in range(n, 0, -1):
+    for i in range(n, -1):
         yield i
 
 print(*nums(n))
