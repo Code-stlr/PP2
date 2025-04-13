@@ -103,7 +103,7 @@ while True:
     for event in pygame.event.get():
         if event.type == INC_SPEED:
               SPEED += 0.5      
-        if event.type == QUIT:
+        if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
 
@@ -121,7 +121,7 @@ while True:
 
     #To be run if collision occurs between Player and Enemy
     if pygame.sprite.spritecollideany(P1, enemies):
-          pygame.mixer.Sound('lab8/crash.wav').play()
+        #   pygame.mixer.Sound('lab8/crash.wav').play()
           time.sleep(1)
                    
           DISPLAYSURF.fill(RED)

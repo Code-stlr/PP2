@@ -6,13 +6,13 @@ pygame.init()
 a = pygame.display.set_mode((1000,650))
 pygame.display.set_caption("Second")
 
-b = pygame.image.load("lab7/clock.png")
+b = pygame.image.load("C:\My Web Sites\pp2\Lab_07\clock.png")
 b = pygame.transform.scale(b,(1000, 650))
 
-h = pygame.image.load("lab7/rightarm.png")
+h = pygame.image.load(r"C:\My Web Sites\pp2\Lab_07\rightarm.png")
 h = pygame.transform.scale(h,(1000,700))
 
-c = pygame.image.load("lab7/leftarm.png")
+c = pygame.image.load(r"C:\My Web Sites\pp2\Lab_07\leftarm.png")
 c = pygame.transform.scale(c,(40,640))
 
 run = True

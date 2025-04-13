@@ -6,7 +6,7 @@ pygame.mixer.init()
 a = pygame.display.set_mode((300,300))
 pygame.display.set_caption("sound")
 
-e=[pygame.mixer.Sound("lab7/meow2.wav"), pygame.mixer.Sound("lab7/mario_start.wav"), pygame.mixer.Sound("lab7/mario_smert.wav")]
+e=[pygame.mixer.Sound(r"C:\My Web Sites\pp2\Lab_07\meow2.wav"), pygame.mixer.Sound(r"C:\My Web Sites\pp2\Lab_07\mario_start.wav"), pygame.mixer.Sound(r"C:\My Web Sites\pp2\Lab_07\mario_smert.wav")]
 j=0
 
 run = True
