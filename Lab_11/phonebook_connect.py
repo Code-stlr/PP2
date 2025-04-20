@@ -15,9 +15,9 @@ def connect():
 def insert_from_csv():
     conn = connect()
     cur = conn.cursor()
-    with open(r'C:\Users\орром\OneDrive - АО Казахстанско-Британский Технический Университет\Документы\programming2\PP2\lab10\phonebook.csv', 'r') as file:
+    with open(r'C:\My Web Sites\pp2\Lab_11\phonebook.csv', 'r') as file:
         reader = csv.reader(file)
-        next(reader)  # Пропустить заголовок
+        next(reader)  
         for row in reader:
             cur.execute(
                 "INSERT INTO phonebook (first_name, phone_number) VALUES (%s, %s)",
